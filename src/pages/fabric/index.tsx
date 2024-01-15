@@ -1,8 +1,9 @@
 import React from "react";
 import FabricDemo from "@/views/fabric";
+import FabricTest from "@/views/fabric/fabricTest";
 
 function Fabric() {
-  return <FabricDemo />;
+  return <FabricTest />;
 }
 
 export default Fabric;
