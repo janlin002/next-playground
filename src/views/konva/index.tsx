@@ -1,24 +1,26 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Stage, Layer, Line, Text } from "react-konva";
 
+type Tool = "pen" | "eraser";
+
 const Konva = () => {
-  const [tool, setTool] = React.useState<"pen" | "eraser">("pen");
-  const [lines, setLines] = React.useState<
+  const [tool, setTool] = useState<Tool>("pen");
+  const [lines, setLines] = useState<
     Array<{
-      tool: "pen" | "eraser";
+      tool: Tool;
       points: Array<number>;
     }>
   >([]);
-  const isDrawing = React.useRef(false);
+  const isDrawing = useRef(false);
 
-  console.log(lines, "lines");
-
+  // 點擊
   const handleMouseDown = (e: any) => {
     isDrawing.current = true;
     const pos = e.target.getStage().getPointerPosition();
     setLines([...lines, { tool, points: [pos.x, pos.y] }]);
   };
 
+  // 滑鼠移動
   const handleMouseMove = (e: any) => {
     // no drawing - skipping
     if (!isDrawing.current) {
@@ -37,6 +39,10 @@ const Konva = () => {
 
   const handleMouseUp = () => {
     isDrawing.current = false;
+  };
+
+  const handleClearAll = () => {
+    setLines([]);
   };
 
   return (
@@ -79,6 +85,7 @@ const Konva = () => {
         <option value="pen">Pen</option>
         <option value="eraser">Eraser</option>
       </select>
+      <button onClick={handleClearAll}>清除畫布</button>
     </div>
   );
 };
