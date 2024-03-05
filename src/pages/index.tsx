@@ -1,7 +1,11 @@
 import React from "react";
+import { useTheme, Theme } from "@/hooks/useTheme";
 
 const Index = () => {
-  return <div>123</div>;
+  const [theme, changeTheme] = useTheme();
+
+  console.log(theme, "theme");
+  return <button onClick={() => changeTheme()}>換</button>;
 };
 
 export default Index;
