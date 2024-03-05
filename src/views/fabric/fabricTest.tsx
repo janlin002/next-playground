@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { fabric } from "fabric";
-import "@/libs/eraser_brush_mixin.js";
+// import "@/libs/eraser_brush_mixin.js";
 
 import { CanvasWrap } from "./index.style";
 
@@ -21,7 +21,7 @@ const FabricTest = ({ canvasId }: any) => {
     canvasItem.freeDrawingCursor = "default";
     canvasItem.isDrawingMode = true;
 
-    canvasRef.current = canvasItem;
+    // canvasRef.current = canvasItem;
   }, []);
 
   // 文字

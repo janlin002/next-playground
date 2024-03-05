@@ -79,7 +79,7 @@ const Konva = () => {
       <select
         value={tool}
         onChange={(e) => {
-          setTool(e.target.value);
+          setTool(e.target.value as any);
         }}
       >
         <option value="pen">Pen</option>
