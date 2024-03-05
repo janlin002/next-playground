@@ -64,7 +64,7 @@ const OffDemo = () => {
   return (
     <>
       Tool:
-      <select id="tool" onChange={() => (mode = select.value)}>
+      <select id="tool" onChange={() => {}}>
         <option value="brush">Brush</option>
         <option value="eraser">Eraser</option>
       </select>
