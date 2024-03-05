@@ -1,0 +1,35 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:16-browsers
+    working_directory: /app
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            yarn install
+      - run:
+          name: Build Next.js app
+          # command: |
+          # yarn build
+      - run:
+          name: Run tests
+          command: |
+            yarn test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+  deploy:
+    docker:
+      - image: circleci/node:16-browsers
+    working_directory: /app
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Deploy to production
+          command: |
+            # Add your deployment commands here
