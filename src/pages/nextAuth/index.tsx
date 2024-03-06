@@ -3,7 +3,7 @@
 import React from "react";
 import { useSession } from "next-auth/react";
 
-import LoginButton from "@/pages/components/loginButton";
+import LoginButton from "@/components/loginButton";
 
 const Index = () => {
   const { data: session, status } = useSession();
