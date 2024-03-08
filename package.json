@@ -36,6 +36,7 @@
     "react-dom": "^18",
     "react-konva": "^18.2.10",
     "react-strict-dom": "^0.0.1",
+    "react-use-ez": "^1.0.1",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2"
   },

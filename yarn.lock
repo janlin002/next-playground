@@ -4767,6 +4767,11 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-use-ez@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-use-ez/-/react-use-ez-1.0.1.tgz#49089e1008f06416beec6ba7505b4c5bd7dcc58b"
+  integrity sha512-c+To+PGTQxZy1Y0xFtGQHEkCIsxPOZqg++E7srsXNY7ExoOZKgeAmCWxSjT7C4z/8e1tNe0GhddbR9iThnorCg==
+
 react@^18:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
