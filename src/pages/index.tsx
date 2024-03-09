@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useTheme, Theme } from "@/hooks/useTheme";
 
@@ -7,6 +9,8 @@ const Index = () => {
   const [theme, changeTheme] = useTheme();
 
   const message = useRemoteConfig("subscribePlan");
+
+  console.log(message, "message");
 
   return <button onClick={() => changeTheme()}>換</button>;
 };
