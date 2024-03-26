@@ -1,0 +1,45 @@
+.dragEvent-wrap {
+  height: 500px;
+  margin-top: 20px;
+  display: flex;
+}
+
+.content-wrap {
+  width: 102px;
+  height: 200px;
+  border: 1px solid black;
+  margin-left: 100px;
+}
+
+.item-text {
+  background-color: aqua;
+  width: 100px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.over {
+  border: 2px solid red;
+}
+
+.container {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -400px 0 0 -400px;
+  border: 2px solid green;
+}
+
+.draggerBox {
+  width: 200px;
+  height: 300px;
+  border: 1px solid red;
+}
+
+.dragger {
+  width: 100%;
+  height: 50px;
+  background: blue;
+}
